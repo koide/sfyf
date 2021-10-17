@@ -451,6 +451,7 @@ var Engine = (() => { // eslint-disable-line no-unused-vars, no-var
 			.addClass(`passage ${passage.className}`);
 
 		// Add the passage's classes and tags to the document body.
+		/* disables the automatic tagging of body and document
 		jQuery(document.body)
 			.attr('data-tags', dataTags)
 			.addClass(passage.className);
@@ -458,6 +459,7 @@ var Engine = (() => { // eslint-disable-line no-unused-vars, no-var
 		// Add the passage's tags to the document element.
 		jQuery(document.documentElement)
 			.attr('data-tags', dataTags);
+			*/
 
 		// Execute pre-render events and tasks.
 		jQuery.event.trigger({
