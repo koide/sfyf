@@ -1,44 +1,41 @@
 /***********************************************************************************************************************
-
-	css/core-passage.css
-
+	css/core-macro.css
 	Copyright © 2013–2021 Thomas Michael Edwards <thomasmedwards@gmail.com>. All rights reserved.
 	Use of this source code is governed by a BSD 2-clause "Simplified" License, which may be found in the LICENSE file.
-
 ***********************************************************************************************************************/
 
 /*
 	Default appearance styles.
 */
-
-.passage {
-	line-height: 1.75;
-	text-align: left;
-	-webkit-transition: opacity 0.4s ease-in;
-	-o-transition: opacity 0.4s ease-in;
-	transition: opacity 0.4s ease-in;
-	background: linear-gradient(to bottom right, #fffc, #fff4);
-	padding: 15px;
-	border-radius: 15px;
-	margin: 10px;
-	color: #2D1A64;
+@keyframes cursor-blink {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
 }
 
-.passage-in {
+.macro-linkappend-insert,
+.macro-linkprepend-insert,
+.macro-linkreplace-insert,
+.macro-append-insert,
+.macro-prepend-insert,
+.macro-replace-insert,
+.macro-repeat-insert,
+.macro-timed-insert {
+	transition: opacity 400ms ease-in;
+}
+.macro-linkappend-in,
+.macro-linkprepend-in,
+.macro-linkreplace-in,
+.macro-append-in,
+.macro-prepend-in,
+.macro-replace-in,
+.macro-repeat-in,
+.macro-timed-in {
 	opacity: 0;
 }
 
-.passage ol, .passage ul {
-	margin-left: 0.5em;
-	padding-left: 1.5em;
-}
-
-.passage table {
-	margin: 1em 0;
-	border-collapse: collapse;
-	font-size: 100%;
-}
-
-.passage caption, .passage td, .passage th, .passage tr {
-	padding: 3px;
+.macro-type-cursor:after {
+	animation: cursor-blink 1s infinite;
+	content: "\2590"; /* "\2588" */
+	opacity: 1;
 }
