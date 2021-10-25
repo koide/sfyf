@@ -555,6 +555,10 @@ var Engine = (() => { // eslint-disable-line no-unused-vars, no-var
 		jQuery(passageEl)
 			.addClass('passage-in')
 			.appendTo(containerEl);
+		// Adds div box around chat bubbles
+		if (passageEl.className.toLowerCase().indexOf('chat') > -1) {
+			jQuery('.passage-in').wrap("<div class='chatbox'></div>");
+		}
 		setTimeout(() => jQuery(passageEl).removeClass('passage-in'), minDomActionDelay);
 
 		// Update the story display title, if necessary.
