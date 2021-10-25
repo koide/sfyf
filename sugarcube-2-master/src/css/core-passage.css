@@ -17,9 +17,9 @@
 	-o-transition: opacity 0.4s ease-in;
 	transition: opacity 0.4s ease-in;
 	background:linear-gradient(to bottom right, #fffc, #fff4);
-	padding: 20px;
+	padding: 15px;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px 20px;
 	color: black;
   }
   

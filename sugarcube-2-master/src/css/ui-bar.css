@@ -11,18 +11,18 @@
 	Patches to the core styles.
 */
 #story {
-	margin-left: 20em;
+	margin-left: 0em;
 	transition: margin-left 200ms ease-in;
 }
 #ui-bar.stowed ~ #story {
-	margin-left: 4.5em;
+	margin-left: 0em;
 }
 @media screen and (max-width: 1136px) {
 	#story {
-		margin-left: 19em;
+		margin-left: 0em;
 	}
 	#ui-bar.stowed ~ #story {
-		margin-left: 3.5em;
+		margin-left: 0em;
 	}
 }
 /*
@@ -32,7 +32,7 @@
 */
 @media screen and (max-width: 768px) {
 	#story {
-		margin-left: 3.5em;
+		margin-left: 0em;
 	}
 }
 
@@ -77,8 +77,8 @@
 	Default appearance styles.
 */
 #ui-bar {
-	background-color: #222;
-	border-right: 1px solid #444;
+	background-color: transparent;
+	border-right: 1px solid transparent;
 	text-align: center;
 }
 #ui-bar a {
