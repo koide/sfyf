@@ -632,6 +632,8 @@
 					// Set up the typing interval and start/stop event firing.
 					const typeNode = function typeNode() {
 						const typeNodeMember = function typeNodeMember(typeIntervalId) {
+							var $page = $("html, body"); 
+							$page.animate({scrollTop: $page.height()}, 200);
 							// Stop typing if….
 							if (
 								// …we've navigated away.
@@ -671,6 +673,7 @@
 
 						// Fire the typing start event.
 						$wrapper.trigger(typingStartId);
+
 
 						// Type the initial node member.
 						typeNodeMember();
